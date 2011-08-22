@@ -1,0 +1,57 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+img {
+  position: relative;
+  right: 30px;  
+}
+
+label.topic {
+  position: relative;
+  top: 20px;
+}
+
+input.topic {
+  position: relative;
+  top: 20px;
+  left: 50px; 
+  border: 1px solid #006;
+}
+
+label.speaker {
+  position: relative;
+  top: 60px;
+  right: 220px;
+}
+
+input.speaker {
+  position: relative;
+  top: 60px;
+  right: 185px;
+  border: 1px solid #006;
+}
+
+label.desc {
+  position: relative;
+  top: 100px;
+  right: 430px;
+}
+
+textarea.desc {
+  position: relative;
+  top: 160px;
+  right: 420px;
+  border: 1px solid #006;
+}
+
+input.submit {
+  position: relative;
+  top: 180px;
+  right:700px;  
+}
