@@ -34,5 +34,13 @@ app.get('/', function(req, res){
   });
 });
 
+app.post('/session', function(req, res) {
+  var topic = req.body.topic,
+      speaker = req.body.speaker,
+      description = req.body.description;
+      
+  res.redirect('/');    
+});
+
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

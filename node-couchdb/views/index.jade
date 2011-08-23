@@ -1,10 +1,11 @@
-img(src='images/64_popup.jpg')
+a(href='/')
+  img(src='images/64_popup.jpg')
 p Welcome to #{title}
-form(action='/', method='POST')
+form(action='/session', method='POST')
   label.topic Topic:
-  input.topic(type='text', value='', id='topic', size='30') 
+  input.topic(type='text', value='', name='topic', size='30') 
   label.speaker Speaker:
-  input.speaker(type='text', value='', id='speaker', size='25')  
+  input.speaker(type='text', value='', name='speaker', size='25')  
   label.desc Description:
-  textarea.desc(value='', id='description', rows='5', cols='25')
+  textarea.desc(value='', name='description', rows='5', cols='25')
   input.submit(type='submit', value='Post')
