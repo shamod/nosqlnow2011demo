@@ -55,3 +55,23 @@ input.submit {
   top: 180px;
   right:700px;  
 }
+
+.speakersList {
+  position: relative;
+  top: 200px;
+}
+
+.headerTitle {
+  position: relative;
+  top: 200px;  
+}
+
+.headerSpeaker {
+  position: relative;
+  top: 220px;
+}
+
+.headerDescription {
+  position: relative;
+  top: 240px;
+}

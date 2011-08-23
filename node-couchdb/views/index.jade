@@ -2,10 +2,23 @@ a(href='/')
   img(src='images/64_popup.jpg')
 p Welcome to #{title}
 form(action='/session', method='POST')
-  label.topic Topic:
+  label.topic Title:
   input.topic(type='text', value='', name='topic', size='30') 
   label.speaker Speaker:
   input.speaker(type='text', value='', name='speaker', size='25')  
   label.desc Description:
   textarea.desc(value='', name='description', rows='5', cols='25')
   input.submit(type='submit', value='Post')
+br
+h1.speakersList List of Sessions
+- sessions.forEach(function(session) {
+  .headerTitle
+    label Title:
+      = session.topic
+  .headerSpeaker
+    label Speaker:
+      = session.speaker
+  .headerDescription
+    label Description:
+      = session.description
+- });

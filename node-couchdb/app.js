@@ -7,6 +7,8 @@ var express = require('express');
 
 var app = module.exports = express.createServer();
 
+var sessionController = require('./controllers/SessionController');
+
 // Configuration
 
 app.configure(function(){
@@ -30,7 +32,8 @@ app.configure('production', function(){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'NoSQLNow 2011!'
+    title: 'NoSQLNow 2011!',
+    sessions: sessionController.getSessions()
   });
 });
 
@@ -38,8 +41,8 @@ app.post('/session', function(req, res) {
   var topic = req.body.topic,
       speaker = req.body.speaker,
       description = req.body.description;
-      
-  res.redirect('/');    
+  sessionController.create(topic, speaker, description); 
+  res.redirect('/');   
 });
 
 app.listen(3000);
