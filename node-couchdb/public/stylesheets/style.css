@@ -15,6 +15,7 @@ img {
 label.topic {
   position: relative;
   top: 20px;
+  left: -10px;
 }
 
 input.topic {
@@ -74,4 +75,9 @@ input.submit {
 .headerDescription {
   position: relative;
   top: 240px;
+}
+
+table {
+  position: relative;
+  top: 200px;
 }

@@ -31,10 +31,12 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', function(req, res){
-  res.render('index', {
-    title: 'NoSQLNow 2011!',
-    sessions: sessionController.getSessions()
-  });
+    sessionController.getSessions(function(sessions) {
+        res.render('index', {
+            title: 'NoSQLNow 2011!',
+            sessions: sessions
+        });
+    });
 });
 
 app.post('/session', function(req, res) {

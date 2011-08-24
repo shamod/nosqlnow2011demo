@@ -10,15 +10,22 @@ form(action='/session', method='POST')
   textarea.desc(value='', name='description', rows='5', cols='25')
   input.submit(type='submit', value='Post')
 br
-h1.speakersList List of Sessions
-- sessions.forEach(function(session) {
-  .headerTitle
-    label Title:
-      = session.topic
-  .headerSpeaker
-    label Speaker:
-      = session.speaker
-  .headerDescription
-    label Description:
-      = session.description
-- });
+- if(sessions)
+  h1.speakersList List of Sessions
+  table(border="1")  
+    - sessions.forEach(function(session) {    
+      tr
+        td                
+          label Title:
+          = session.topic
+          br
+          br       
+          label Speaker:
+          = session.speaker        
+          br
+          br
+          label Description:
+          = session.description
+          br
+          br
+    - });
