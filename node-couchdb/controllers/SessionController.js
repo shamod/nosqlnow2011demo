@@ -23,15 +23,19 @@ exports.getSessions = function(callback) {
   dao.getAll(function(err, res) {
     if(err) {
       console.log(err);
-    } else {      
-      for(var i = 0; i < res.length; i++) {
-        dao.find(res[i].id, function(err, doc) {        
-          arrSession.push(doc);       
-          if(i === (res.length - 1)) {
-            callback(arrSession);
-          }
-        });
-      };
+    } else { 
+      if(res.length > 0) {     
+        for(var i = 0; i < res.length; i++) {
+          dao.find(res[i].id, function(err, doc) {        
+            arrSession.push(doc);       
+            if(i === (res.length - 1)) {
+              callback(arrSession);
+            }
+          });
+        };
+      } else {
+        callback(arrSession);
+      }
     }
   });
 };
