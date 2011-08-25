@@ -62,21 +62,6 @@ input.submit {
   top: 200px;
 }
 
-.headerTitle {
-  position: relative;
-  top: 200px;  
-}
-
-.headerSpeaker {
-  position: relative;
-  top: 220px;
-}
-
-.headerDescription {
-  position: relative;
-  top: 240px;
-}
-
 table {
   position: relative;
   top: 200px;
